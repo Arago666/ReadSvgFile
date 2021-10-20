@@ -1,47 +1,54 @@
 <?php
 
-namespace app\src;
+namespace App\src;
 
-use app\src\Row;
-use app\src\Cell;
-use app\interfaces\FileReaderInterface;
+use App\interfaces\TableFileReaderInterface;
+use SplFileObject;
 
-class ReadFileFormatCsv implements FileReaderInterface
+class ReadFileFormatCsv implements TableFileReaderInterface
 {
-    public static function read(\SplFileObject $file): \Generator
+    public function read(SplFileObject $file): \Generator
     {
         $titleColumns = static::readTitleColumnsFromFirstRow($file);
         $rowId = 1;
-        while ( ($row = static::readOneRow($file)) == true) {
-            if(static::rowIsNotEmpty($row)) {
-                yield static::createObjectFromRow($row, (string)$rowId, $titleColumns);
+
+        while (($row = static::readOneRow($file)) !== false) {
+            if (static::rowIsEmpty($row)) {
+                continue;
             }
+
+            yield static::createRow($row, (string)$rowId, $titleColumns);
             $rowId++;
         }
     }
 
-    private static function readTitleColumnsFromFirstRow(\SplFileObject $file): array
+    /**
+     * @return array[]
+     */
+    private static function readTitleColumnsFromFirstRow(SplFileObject $file): array
     {
-        $titleColumns = static::readOneRow($file);
-
-        return $titleColumns;
+        return static::readOneRow($file);
     }
 
-    private static function readOneRow(\SplFileObject $file): array|null
+    /**
+     * @return array[]
+     */
+    private static function readOneRow(SplFileObject $file): ?array
     {
         return $file->fgetcsv();
     }
 
-    private static function rowIsNotEmpty(array $row): bool
+    private static function rowIsEmpty(array $row): bool
     {
-        return !is_null($row[0]);
+        return is_null($row[0]);
     }
 
-    private static function createObjectFromRow(array $row, string $rowId, array $titleFileColumns): Row
+    private static function createRow(array $row, string $rowId, array $titleColumns): Row
     {
         $rowClass = new Row($rowId);
-        for ($i = 0; $i < count($titleFileColumns); $i++) {
-            $cell = new Cell((string)$i, $titleFileColumns[$i], $row[$i]);
+
+        foreach ($titleColumns as $index => $title) {
+            $cell = new Cell((string) $index, (string) $title, (string) $row[$index]);
             $rowClass->addCells($cell);
         }
 

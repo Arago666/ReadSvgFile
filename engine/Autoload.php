@@ -2,9 +2,10 @@
 
 class Autoload
 {
-    public function loadClass($className)
+    public function loadClass($className): void
     {
-        $fileName = str_replace(['app','\\'], [dirname(__DIR__), DIRECTORY_SEPARATOR], $className . ".php");
+        $fileName = str_replace(['App','\\'], [dirname(__DIR__), DIRECTORY_SEPARATOR], $className . ".php");
+
         if(file_exists($fileName)) {
             include $fileName;
         }

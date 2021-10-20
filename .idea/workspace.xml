@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54d79ba8-5814-4ba8-99c8-12f15fbc2ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/FileReaderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cell.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReadFileFormatCsv.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Row.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Autoload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/FileReaderInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/TableFileReaderInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadFileFormatCsv.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFileFormatCsv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Row.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,38 +18,31 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1z6x76c56oD8vp8457bmpr54imt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/Open Server/OSPanel/domains/php2" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\ReadSvgFile" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -67,24 +58,33 @@
       <workItem from="1633498352761" duration="9322000" />
       <workItem from="1633598492612" duration="3358000" />
       <workItem from="1633659092238" duration="3530000" />
-      <workItem from="1633912152237" duration="14243000" />
+      <workItem from="1633912152237" duration="17502000" />
+      <workItem from="1634181445777" duration="299000" />
+      <workItem from="1634196298380" duration="147000" />
+      <workItem from="1634196457909" duration="103000" />
+      <workItem from="1610609399995" duration="6000" />
+      <workItem from="1634196628277" duration="11000" />
+      <workItem from="1634196649915" duration="614000" />
+      <workItem from="1634519414197" duration="657000" />
+      <workItem from="1634532360597" duration="1263000" />
+      <workItem from="1634617001336" duration="67000" />
+      <workItem from="1634712116153" duration="3667000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

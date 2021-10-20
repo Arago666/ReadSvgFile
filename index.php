@@ -1,16 +1,18 @@
 <?php
 declare(strict_types = 1);
 
-use app\src\ReadFileFormatCsv;
+use App\src\ReadFileFormatCsv;
 
 include realpath("engine/Autoload.php");
 spl_autoload_register([new Autoload(), 'loadClass']);
 
 try {
-    $filePath = __DIR__ . '/test.csv';
+    $filePath = __DIR__ . '/test1.csv';
     $file = new SplFileObject($filePath);
-    $file->setCsvControl(';');
-    foreach(ReadFileFormatCsv::read($file) as $fileData) {
+    $file->setCsvControl(',');
+    $fileReader = new ReadFileFormatCsv();
+
+    foreach($fileReader->read($file) as $fileData) {
         var_dump($fileData);
     }
 

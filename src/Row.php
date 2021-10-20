@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src;
+namespace App\src;
 
 final class Row
 {
@@ -17,6 +17,9 @@ final class Row
         return $this->id;
     }
 
+    /**
+     * @return Cell[]
+     */
     public function getCells(): array
     {
         return $this->cells;
